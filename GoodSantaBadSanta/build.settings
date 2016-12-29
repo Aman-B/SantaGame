@@ -79,4 +79,34 @@ settings =
 			"android.permission.INTERNET",
 		},
 	},
+
+	
+	plugins =
+	{
+		-- key is the name passed to Lua's 'require()'
+		["CoronaProvider.native.popup.social"] =
+		{
+			-- required
+			publisherId = "com.coronalabs",
+		},
+		["plugin.coronaAds"] =
+            {
+                publisherId = "com.coronalabs",
+                supportedPlatforms = { iphone=true, android=true }
+            },
+        ["plugin.google.play.services"] =
+            {
+                publisherId = "com.coronalabs",
+                supportedPlatforms = { android=true}
+            },
+
+        --google play service
+         --key is the name passed to the Lua "require()"
+	   ["CoronaProvider.gameNetwork.google"] =
+	   {
+	      --required!
+	      publisherId = "com.coronalabs",
+	   },
+
+	},
 }
